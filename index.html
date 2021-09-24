@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
 </head>
 
 <style>
-    .container{
+    .container {
         width: 100%;
         background-color: #fff;
         position: fixed;
@@ -17,111 +18,118 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        transform: translate3d(-50%,-50%,0);
+        transform: translate3d(-50%, -50%, 0);
     }
-        .container .number{
-            width: 390px;
-            height: 150px;
-            background-color: #fff;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%,-50%,0);
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-        }
-        .container .content{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background:rebeccapurple ;
-            color: #ffffff;
-        }
-        .button{
-            width: 150px;
-            height: 50px;
-            color: #ffffff;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: deepskyblue;
-            margin-top: 320px;
-            border-radius: 7px;
-            outline: none;
-            border: none;
-        }
-        .tou{
-         width: 350px;
-        margin:  0 auto;
+
+    .container .number {
+        width: 390px;
+        height: 150px;
+        background-color: #fff;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .container .content {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rebeccapurple;
+        color: #ffffff;
+    }
+
+    .button {
+        width: 150px;
+        height: 50px;
+        color: #ffffff;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: deepskyblue;
+        margin-top: 320px;
+        border-radius: 7px;
+        outline: none;
+        border: none;
+    }
+
+    .tou {
+        width: 350px;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 30px
-        
-        
-        
-       
-    
-      
-        }
-        img{
-            width: 100px;
-            height: 100px
-        }
-    </style>
-    <body>
-            <div class="tou">
-                <img src="./images/tou1.jpg" alt="">
-            </div>
-    <div class="container">
-            
-        <div class="number">
-        <div id="a" class="content"></div>
-        <div id="b"  class="content"></div>
-        <div id="c"  class="content"></div>
-        <div id="d"  class="content"></div>
-        <div id="e" class="content"></div>
-        </div>
-        <button   class="button">
-           重新生成
-        </button>
-    
+    }
+
+    img {
+        width: 100px;
+        height: 100px
+    }
+</style>
+
+<body>
+    <div class="tou">
+        <img src="./images/tou1.jpg" alt="">
     </div>
-    
-    
-    
-    
-    </body>
-    </html>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
-    <script>
-        
+    <div class="container">
+
+        <div class="number">
+            <div id="a" class="content"></div>
+            <div id="b" class="content"></div>
+            <div id="c" class="content"></div>
+            <div id="d" class="content"></div>
+            <div id="e" class="content"></div>
+            <div id="f" class="content"></div>
+            <div id="g" class="content"></div>
+        </div>
+        <button class="button">
+            重新生成
+        </button>
+
+    </div>
 
 
-        function  toCreate(){
-            let array = [1,3,4,7,8,12,16,18,26,28,30,33]
-            array =   _.shuffle(array)
-            console.log(array)
-            let obj1 =  document.querySelector("#a")
-            let obj2 =  document.querySelector("#b")
-            let obj3 =  document.querySelector("#c")
-            let obj4 =  document.querySelector("#d")
-            let obj5 =  document.querySelector("#e")
-            obj1.innerHTML = array[0]
-            obj2.innerHTML = array[1]
-            obj3.innerHTML = array[2]
-            obj4.innerHTML = array[3]
-            obj5.innerHTML = array[4]
-            }
-     toCreate()
+
+
+</body>
+
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+<script>
+
+
+
+    function toCreate() {
+        let array = [1, 3, 4, 7, 8, 12, 16, 18, 26, 28, 30, 33]
+        array = _.shuffle(array)
+        console.log(array)
+        let obj1 = document.querySelector("#a")
+        let obj2 = document.querySelector("#b")
+        let obj3 = document.querySelector("#c")
+        let obj4 = document.querySelector("#d")
+        let obj5 = document.querySelector("#e")
+        let obj6 = document.querySelector("#f")
+        let obj7 = document.querySelector("#g")
+        obj1.innerHTML = array[0]
+        obj2.innerHTML = array[1]
+        obj3.innerHTML = array[2]
+        obj4.innerHTML = array[3]
+        obj5.innerHTML = array[4]
+        obj6.innerHTML = array[5]
+        obj7.innerHTML = array[6]
+    }
+    toCreate()
     //两个执行上下文  count (全局)     另一个是函数      基本数据不能变 两块内存空间的count  掘金册子
-        let  button = document.querySelector('.button')
-        button.addEventListener('click' ,()=>{
-            toCreate()
-        } )
-    </script>
+    let button = document.querySelector('.button')
+    button.addEventListener('click', () => {
+        toCreate()
+    })
+</script>
